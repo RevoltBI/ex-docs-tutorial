@@ -145,8 +145,8 @@ with open('/data/out/tables/data.csv', 'w') as csvfile:
                     for photo in tempPhotos:
                         if isinstance(photo, dict):
                             photos.append(photo['#text'])
-            except IndexError:
-                print("No extras, remarkds or photos")
+            except:
+                print("No extras, remarks or photos")
 
             writer.writerow([
                 car['id'],
